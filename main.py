@@ -524,3 +524,4 @@ async def restart_game(sid, data):
     for p in room["players"]:
         await sio.emit("room_update", get_room_state(room_id, p["sid"]), to=p["sid"])
     await sio.emit("system_message", {"text": "Qayta boshlashga tayyor! Admin 'Boshlash' tugmasini bossin.", "type": "info"}, room=room_id)
+app = socket_app 
